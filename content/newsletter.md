@@ -10,4 +10,4 @@ Expect occasional posts on writing, weird fiction, and the process of getting a 
 
 That's it. No schedule, no filler, no nonsense. Easy unsubscribe in each newsletter, and no selling your address/data.
 
-[Subscribe](https://buttondown.com/oddconley)
+[Subscribe on Buttondown](https://buttondown.com/oddconley)

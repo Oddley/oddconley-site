@@ -48,7 +48,7 @@ You are welcome to use the name "Arcadeia Arcanum" to describe works set in this
 
 Please avoid implying that your work is officially endorsed or canonical. A short disclaimer like the following is appreciated:
 
-*"This is an unofficial work set in the Arcadeia Arcanum universe. Arcadeia Arcanum is a series created by odd Conley."*
+> "This is an unofficial work set in the Arcadeia Arcanum universe. Arcadeia Arcanum is a series created by odd Conley."
 
 ---
 

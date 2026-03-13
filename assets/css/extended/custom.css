@@ -24,13 +24,13 @@
     /* Miami neon in daylight */
     --neon-blue:  #0055cc;
     --neon-pink:  #d4005e;
-    --neon-amber: #c07800;
+    --neon-amber: #8a5500; /* darkened for WCAG AA contrast on cream bg */
     --neon-cyan:  #007a99;
 
     /* Colored drop shadows — neon readable against light bg */
     --glow-blue:  0 2px 6px rgba(0, 85, 204, 0.55), 0 0 18px rgba(0, 85, 204, 0.25);
     --glow-pink:  0 2px 6px rgba(212, 0, 94, 0.55),  0 0 18px rgba(212, 0, 94, 0.25);
-    --glow-amber: 0 2px 6px rgba(192, 120, 0, 0.55), 0 0 18px rgba(192, 120, 0, 0.25);
+    --glow-amber: 0 2px 6px rgba(138, 85, 0, 0.55), 0 0 18px rgba(138, 85, 0, 0.25);
 
     /* Component-specific variables */
     --header-bg:      rgba(253, 240, 230, 0.92);
@@ -56,12 +56,12 @@
 
     --neon-blue:  #0055cc;
     --neon-pink:  #d4005e;
-    --neon-amber: #c07800;
+    --neon-amber: #8a5500; /* darkened for WCAG AA contrast on cream bg */
     --neon-cyan:  #007a99;
 
     --glow-blue:  0 2px 6px rgba(0, 85, 204, 0.55), 0 0 18px rgba(0, 85, 204, 0.25);
     --glow-pink:  0 2px 6px rgba(212, 0, 94, 0.55),  0 0 18px rgba(212, 0, 94, 0.25);
-    --glow-amber: 0 2px 6px rgba(192, 120, 0, 0.55), 0 0 18px rgba(192, 120, 0, 0.25);
+    --glow-amber: 0 2px 6px rgba(138, 85, 0, 0.55), 0 0 18px rgba(138, 85, 0, 0.25);
 
     --header-bg:       rgba(253, 240, 230, 0.92);
     --btn-border:      rgba(0, 85, 204, 0.45);
@@ -126,8 +126,12 @@ a {
 }
 
 a:hover {
-    color: #ffffff;
+    color: var(--primary);
     text-shadow: var(--glow-blue);
+}
+
+:root[data-theme="dark"] a:hover {
+    color: #ffffff;
 }
 
 /* --------------------------------------------------------------------------
@@ -266,8 +270,9 @@ body:has(.profile) .logo > a {
     margin-bottom: 1rem;
 }
 
-/* Italics in profile content glow amber — book titles etc. */
-.profile-content em {
+/* Italics glow amber — book titles etc. — consistent across landing and pages */
+.profile-content em,
+.post-content em {
     color: var(--neon-amber);
     font-style: italic;
     text-shadow: var(--glow-amber);

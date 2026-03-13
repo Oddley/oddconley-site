@@ -6,7 +6,21 @@ theme = "PaperMod"
 [params]
   author = "odd Conley"
   description = "Weird fiction. Open worlds."
-  
+  defaultTheme = "dark"
+
+[params.profileMode]
+  enabled = true
+  title = "odd Conley"
+  subtitle = "Weird fiction. Open worlds."
+
+[[params.profileMode.buttons]]
+  name = "The Book"
+  url = "/book/"
+
+[[params.profileMode.buttons]]
+  name = "Get Updates"
+  url = "/newsletter/"
+
 [[menus.main]]
 name = "The Book"
 url = "/book/"

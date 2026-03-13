@@ -1,0 +1,293 @@
+/* ==========================================================================
+   Neon Arcade — oddconley.com
+   Palette drawn from character portrait frames: electric blue, hot pink,
+   amber/gold, deep blue-black backgrounds.
+   ========================================================================== */
+
+/* --------------------------------------------------------------------------
+   1. Theme color overrides
+   -------------------------------------------------------------------------- */
+
+:root {
+    --theme: #08080f;
+    --entry: #0d0d1c;
+    --primary: #e8e8f4;
+    --secondary: #6666a8;
+    --tertiary: #141428;
+    --content: #cccce2;
+    --code-block-bg: #0d0d1c;
+    --code-bg: #111124;
+    --border: #1c1c38;
+    color-scheme: dark;
+
+    /* Neon accent palette */
+    --neon-blue:  #00c8ff;
+    --neon-pink:  #ff2d78;
+    --neon-amber: #ffaa00;
+    --neon-cyan:  #00ffe0;
+
+    /* Glow shadows */
+    --glow-blue:  0 0 6px rgba(0, 200, 255, 0.9), 0 0 20px rgba(0, 200, 255, 0.4), 0 0 45px rgba(0, 200, 255, 0.15);
+    --glow-pink:  0 0 6px rgba(255, 45, 120, 0.9), 0 0 20px rgba(255, 45, 120, 0.4);
+    --glow-amber: 0 0 6px rgba(255, 170, 0, 0.9),  0 0 20px rgba(255, 170, 0, 0.4);
+}
+
+:root[data-theme="dark"] {
+    --theme: #08080f;
+    --entry: #0d0d1c;
+    --primary: #e8e8f4;
+    --secondary: #6666a8;
+    --tertiary: #141428;
+    --content: #cccce2;
+    --code-block-bg: #0d0d1c;
+    --code-bg: #111124;
+    --border: #1c1c38;
+}
+
+/* --------------------------------------------------------------------------
+   2. Typography
+   -------------------------------------------------------------------------- */
+
+body {
+    font-family: 'EB Garamond', Georgia, 'Times New Roman', serif;
+    font-size: 1.125rem;
+    line-height: 1.75;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Oxanium', system-ui, sans-serif;
+    letter-spacing: 0.04em;
+}
+
+/* --------------------------------------------------------------------------
+   3. Links
+   -------------------------------------------------------------------------- */
+
+a {
+    color: var(--neon-blue);
+    transition: color 0.15s ease, text-shadow 0.15s ease;
+}
+
+a:hover {
+    color: #ffffff;
+    text-shadow: var(--glow-blue);
+}
+
+/* --------------------------------------------------------------------------
+   4. Header & navigation
+   -------------------------------------------------------------------------- */
+
+.header {
+    background: rgba(8, 8, 15, 0.92);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border-bottom: 1px solid var(--border);
+}
+
+.logo a {
+    font-family: 'Oxanium', sans-serif;
+    font-weight: 700;
+    font-size: 1.05rem;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--neon-blue);
+    text-shadow: var(--glow-blue);
+}
+
+.logo a:hover {
+    color: #ffffff;
+    text-shadow: var(--glow-blue);
+}
+
+#menu a {
+    font-family: 'Oxanium', sans-serif;
+    font-size: 0.75rem;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--secondary);
+    transition: color 0.15s ease, text-shadow 0.15s ease;
+}
+
+#menu a:hover {
+    color: var(--neon-pink);
+    text-shadow: var(--glow-pink);
+}
+
+/* --------------------------------------------------------------------------
+   5. Profile / Landing page hero
+   -------------------------------------------------------------------------- */
+
+/* Override PaperMod's full-viewport centering; stack hero + content vertically */
+.main .profile {
+    flex-direction: column;
+    align-items: center;
+    min-height: unset;
+    padding: 4rem 0 2rem;
+}
+
+.profile {
+    text-align: center;
+}
+
+.profile_inner h1 {
+    font-family: 'Oxanium', sans-serif;
+    font-size: clamp(2rem, 6vw, 3.25rem);
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--neon-blue);
+    text-shadow: var(--glow-blue);
+    margin-bottom: 0.4rem;
+}
+
+.profile_inner > span {
+    display: block;
+    font-family: 'EB Garamond', Georgia, serif;
+    font-size: 1.3rem;
+    font-style: italic;
+    color: var(--secondary);
+    letter-spacing: 0.03em;
+    margin-bottom: 1.75rem;
+}
+
+/* Hero buttons */
+.profile .buttons {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.75rem;
+    margin-top: 0.5rem;
+}
+
+.profile .button {
+    text-decoration: none;
+}
+
+.profile .button-inner {
+    font-family: 'Oxanium', sans-serif;
+    font-size: 0.8rem;
+    font-weight: 600;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--neon-blue);
+    border: 1px solid rgba(0, 200, 255, 0.45);
+    padding: 0.55rem 1.5rem;
+    border-radius: 2px;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4em;
+    background: rgba(0, 200, 255, 0.04);
+    transition: all 0.2s ease;
+    text-shadow: none;
+}
+
+.profile .button:hover .button-inner {
+    color: #ffffff;
+    border-color: var(--neon-blue);
+    background: rgba(0, 200, 255, 0.1);
+    box-shadow: var(--glow-blue), inset 0 0 18px rgba(0, 200, 255, 0.07);
+    text-shadow: var(--glow-blue);
+}
+
+/* Content from _index.md rendered below the hero */
+.profile-content {
+    margin: 2.5rem auto 0;
+    padding-top: 2rem;
+    border-top: 1px solid var(--border);
+    max-width: 620px;
+    text-align: left;
+    font-size: 1.15rem;
+    color: var(--content);
+    line-height: 1.8;
+}
+
+.profile-content p {
+    margin-bottom: 1rem;
+}
+
+/* Italics in profile content glow amber — book titles etc. */
+.profile-content em {
+    color: var(--neon-amber);
+    font-style: italic;
+    text-shadow: var(--glow-amber);
+}
+
+.profile-content a {
+    color: var(--neon-pink);
+}
+
+.profile-content a:hover {
+    text-shadow: var(--glow-pink);
+}
+
+/* --------------------------------------------------------------------------
+   6. Post / blog list entries
+   -------------------------------------------------------------------------- */
+
+.post-entry {
+    border: 1px solid var(--border);
+    border-radius: 3px;
+    background: var(--entry);
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.post-entry:hover {
+    border-color: rgba(0, 200, 255, 0.3);
+    box-shadow: 0 0 18px rgba(0, 200, 255, 0.07);
+}
+
+.entry-header h2 {
+    font-family: 'Oxanium', sans-serif;
+    letter-spacing: 0.03em;
+}
+
+/* --------------------------------------------------------------------------
+   7. Single post
+   -------------------------------------------------------------------------- */
+
+.post-header h1 {
+    font-family: 'Oxanium', sans-serif;
+    font-size: clamp(1.6rem, 4vw, 2.4rem);
+    letter-spacing: 0.04em;
+    line-height: 1.25;
+}
+
+/* --------------------------------------------------------------------------
+   8. Footer
+   -------------------------------------------------------------------------- */
+
+.footer {
+    font-family: 'Oxanium', sans-serif;
+    font-size: 0.7rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--secondary);
+    border-top: 1px solid var(--border);
+}
+
+/* --------------------------------------------------------------------------
+   9. Misc
+   -------------------------------------------------------------------------- */
+
+blockquote {
+    border-left: 3px solid var(--neon-blue);
+    padding-left: 1.25rem;
+    color: var(--secondary);
+    font-style: italic;
+    box-shadow: -3px 0 12px rgba(0, 200, 255, 0.2);
+}
+
+hr {
+    border: none;
+    border-top: 1px solid var(--border);
+}
+
+/* Inline code */
+code {
+    font-size: 0.88em;
+    color: var(--neon-cyan);
+    background: var(--code-bg);
+    border-radius: 3px;
+    padding: 0.1em 0.35em;
+}

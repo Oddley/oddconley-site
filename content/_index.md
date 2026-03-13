@@ -1,0 +1,14 @@
+---
+title: "odd Conley"
+draft: false
+---
+
+Weird fiction. Open worlds.
+
+Somewhere, somewhen, there is an arcade. It is larger on the inside than it has any right to be. A group of strangers find themselves unable to leave.
+
+*The Play Never Ends* is a debut novel currently in final draft, funding via Kickstarter. Sign up to hear when the campaign launches.
+
+[Subscribe for updates](/newsletter/)
+
+Or maybe you're here for the kittens?

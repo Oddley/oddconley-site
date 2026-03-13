@@ -84,12 +84,16 @@ a:hover {
     border-bottom: 1px solid var(--border);
 }
 
+/* Hide logo on home page — the hero title serves this role */
+body:has(.profile) .logo {
+    display: none;
+}
+
 .logo a {
     font-family: 'Oxanium', sans-serif;
     font-weight: 700;
     font-size: 1.05rem;
-    letter-spacing: 0.12em;
-    text-transform: uppercase;
+    letter-spacing: 0.05em;
     color: var(--neon-blue);
     text-shadow: var(--glow-blue);
 }
@@ -134,8 +138,7 @@ a:hover {
     font-family: 'Oxanium', sans-serif;
     font-size: clamp(2rem, 6vw, 3.25rem);
     font-weight: 700;
-    letter-spacing: 0.1em;
-    text-transform: uppercase;
+    letter-spacing: 0.06em;
     color: var(--neon-blue);
     text-shadow: var(--glow-blue);
     margin-bottom: 0.4rem;

@@ -156,7 +156,7 @@ body:has(.profile) .logo > a {
 }
 
 .logo a:hover {
-    color: #ffffff;
+    color: var(--primary);
     text-shadow: var(--glow-blue);
 }
 

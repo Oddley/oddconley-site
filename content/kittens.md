@@ -14,4 +14,4 @@ This page is where we document the current residents. Kitten pictures are also a
 
 ---
 
-*No kittens currently on record. Check back soon, there are always more kittens.*
+> No kittens currently on record. Check back soon, there are always more kittens.

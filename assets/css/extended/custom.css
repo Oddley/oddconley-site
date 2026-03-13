@@ -9,6 +9,70 @@
    -------------------------------------------------------------------------- */
 
 :root {
+    /* Miami daytime — warm ivory/peach, saturated neons in the sun */
+    --theme: #fdf0e6;
+    --entry: #fae6d2;
+    --primary: #0d1428;
+    --secondary: #5c3575;
+    --tertiary: #ecd4c0;
+    --content: #1a1830;
+    --code-block-bg: #ecddc8;
+    --code-bg: #f5e8da;
+    --border: #e8c8b4;
+    color-scheme: light;
+
+    /* Miami neon in daylight */
+    --neon-blue:  #0055cc;
+    --neon-pink:  #d4005e;
+    --neon-amber: #c07800;
+    --neon-cyan:  #007a99;
+
+    /* Colored drop shadows — neon readable against light bg */
+    --glow-blue:  0 2px 6px rgba(0, 85, 204, 0.55), 0 0 18px rgba(0, 85, 204, 0.25);
+    --glow-pink:  0 2px 6px rgba(212, 0, 94, 0.55),  0 0 18px rgba(212, 0, 94, 0.25);
+    --glow-amber: 0 2px 6px rgba(192, 120, 0, 0.55), 0 0 18px rgba(192, 120, 0, 0.25);
+
+    /* Component-specific variables */
+    --header-bg:      rgba(253, 240, 230, 0.92);
+    --btn-border:     rgba(0, 85, 204, 0.45);
+    --btn-bg:         rgba(0, 85, 204, 0.05);
+    --btn-hover-bg:   rgba(0, 85, 204, 0.12);
+    --entry-glow:     0 0 18px rgba(0, 85, 204, 0.1);
+    --blockquote-glow: -3px 0 12px rgba(0, 85, 204, 0.2);
+}
+
+:root[data-theme="light"] {
+    /* Alias — PaperMod sets data-theme="light" explicitly when toggling */
+    --theme: #fdf0e6;
+    --entry: #fae6d2;
+    --primary: #0d1428;
+    --secondary: #5c3575;
+    --tertiary: #ecd4c0;
+    --content: #1a1830;
+    --code-block-bg: #ecddc8;
+    --code-bg: #f5e8da;
+    --border: #e8c8b4;
+    color-scheme: light;
+
+    --neon-blue:  #0055cc;
+    --neon-pink:  #d4005e;
+    --neon-amber: #c07800;
+    --neon-cyan:  #007a99;
+
+    --glow-blue:  0 2px 6px rgba(0, 85, 204, 0.55), 0 0 18px rgba(0, 85, 204, 0.25);
+    --glow-pink:  0 2px 6px rgba(212, 0, 94, 0.55),  0 0 18px rgba(212, 0, 94, 0.25);
+    --glow-amber: 0 2px 6px rgba(192, 120, 0, 0.55), 0 0 18px rgba(192, 120, 0, 0.25);
+
+    --header-bg:       rgba(253, 240, 230, 0.92);
+    --btn-border:      rgba(0, 85, 204, 0.45);
+    --btn-bg:          rgba(0, 85, 204, 0.05);
+    --btn-hover-bg:    rgba(0, 85, 204, 0.12);
+    --entry-glow:      0 0 18px rgba(0, 85, 204, 0.1);
+    --blockquote-glow: -3px 0 12px rgba(0, 85, 204, 0.2);
+}
+
+:root[data-theme="dark"] {
+    /* Neon arcade — deep blue-black, electric neons */
     --theme: #08080f;
     --entry: #0d0d1c;
     --primary: #e8e8f4;
@@ -20,28 +84,21 @@
     --border: #1c1c38;
     color-scheme: dark;
 
-    /* Neon accent palette */
     --neon-blue:  #00c8ff;
     --neon-pink:  #ff2d78;
     --neon-amber: #ffaa00;
     --neon-cyan:  #00ffe0;
 
-    /* Glow shadows */
     --glow-blue:  0 0 6px rgba(0, 200, 255, 0.9), 0 0 20px rgba(0, 200, 255, 0.4), 0 0 45px rgba(0, 200, 255, 0.15);
     --glow-pink:  0 0 6px rgba(255, 45, 120, 0.9), 0 0 20px rgba(255, 45, 120, 0.4);
     --glow-amber: 0 0 6px rgba(255, 170, 0, 0.9),  0 0 20px rgba(255, 170, 0, 0.4);
-}
 
-:root[data-theme="dark"] {
-    --theme: #08080f;
-    --entry: #0d0d1c;
-    --primary: #e8e8f4;
-    --secondary: #6666a8;
-    --tertiary: #141428;
-    --content: #cccce2;
-    --code-block-bg: #0d0d1c;
-    --code-bg: #111124;
-    --border: #1c1c38;
+    --header-bg:      rgba(8, 8, 15, 0.92);
+    --btn-border:     rgba(0, 200, 255, 0.45);
+    --btn-bg:         rgba(0, 200, 255, 0.04);
+    --btn-hover-bg:   rgba(0, 200, 255, 0.1);
+    --entry-glow:     0 0 18px rgba(0, 200, 255, 0.07);
+    --blockquote-glow: -3px 0 12px rgba(0, 200, 255, 0.2);
 }
 
 /* --------------------------------------------------------------------------
@@ -78,14 +135,14 @@ a:hover {
    -------------------------------------------------------------------------- */
 
 .header {
-    background: rgba(8, 8, 15, 0.92);
+    background: var(--header-bg);
     backdrop-filter: blur(12px);
     -webkit-backdrop-filter: blur(12px);
     border-bottom: 1px solid var(--border);
 }
 
-/* Hide logo on home page — the hero title serves this role */
-body:has(.profile) .logo {
+/* Hide logo text on home page — hero title serves this role; keep toggle visible */
+body:has(.profile) .logo > a {
     display: none;
 }
 
@@ -174,22 +231,22 @@ body:has(.profile) .logo {
     letter-spacing: 0.14em;
     text-transform: uppercase;
     color: var(--neon-blue);
-    border: 1px solid rgba(0, 200, 255, 0.45);
+    border: 1px solid var(--btn-border);
     padding: 0.55rem 1.5rem;
     border-radius: 2px;
     display: inline-flex;
     align-items: center;
     gap: 0.4em;
-    background: rgba(0, 200, 255, 0.04);
+    background: var(--btn-bg);
     transition: all 0.2s ease;
     text-shadow: none;
 }
 
 .profile .button:hover .button-inner {
-    color: #ffffff;
+    color: var(--primary);
     border-color: var(--neon-blue);
-    background: rgba(0, 200, 255, 0.1);
-    box-shadow: var(--glow-blue), inset 0 0 18px rgba(0, 200, 255, 0.07);
+    background: var(--btn-hover-bg);
+    box-shadow: var(--glow-blue);
     text-shadow: var(--glow-blue);
 }
 
@@ -236,8 +293,8 @@ body:has(.profile) .logo {
 }
 
 .post-entry:hover {
-    border-color: rgba(0, 200, 255, 0.3);
-    box-shadow: 0 0 18px rgba(0, 200, 255, 0.07);
+    border-color: var(--neon-blue);
+    box-shadow: var(--entry-glow);
 }
 
 .entry-header h2 {
@@ -278,7 +335,7 @@ blockquote {
     padding-left: 1.25rem;
     color: var(--secondary);
     font-style: italic;
-    box-shadow: -3px 0 12px rgba(0, 200, 255, 0.2);
+    box-shadow: var(--blockquote-glow);
 }
 
 hr {

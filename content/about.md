@@ -12,4 +12,4 @@ That career had hard parts too. Burnout. Exploitative conditions. A slow accumul
 
 The Play Never Ends is their debut novel. It is set in an arcade where belief has causal weight, released under a Creative Commons license, and dedicated to the idea that creative worlds grow when more people are allowed to participate in them.
 
-odd lives with their spouse and a rotating cast of foster kittens. You can follow the kittens [here](#). When they are not making or playing video games they are most likely to be found listening to a podcast at double speed or watching a horror movie.
+odd lives with their spouse and a rotating cast of foster kittens. You can follow the kittens [here](#). When odd is not making or playing video games they are most likely to be found listening to a podcast at double speed or watching a horror movie.

@@ -4,7 +4,7 @@ date: 2026-03-12
 draft: false
 ---
 
-*The Play Never Ends* was written to be read — but it was also written to be shared, reused, and built upon. The story is one expression of a larger fictional world, and that world is intentionally open.
+*The Play Never Ends: An Arcadeia Arcanum Novel* was written to be read — but it was also written to be shared, reused, and built upon. The story is one expression of a larger fictional world, and that world is intentionally open.
 
 Here is what that means in practical terms.
 

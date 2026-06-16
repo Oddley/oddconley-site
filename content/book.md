@@ -14,7 +14,7 @@ In this story, as in life, be careful about how you interpret events. It may rev
 
 ## About the License
 
-*The Play Never Ends* is released under a Creative Commons license. The short version: this world is open. Fan fiction, games, adaptations, and classroom use are all explicitly welcomed.
+*The Play Never Ends: An Arcadeia Arcanum Novel* is released under a Creative Commons license. The short version: this world is open. Fan fiction, games, adaptations, and classroom use are all explicitly welcomed.
 
 [See "Using This World" for full licensing details and what they mean in practice](/license/)
 

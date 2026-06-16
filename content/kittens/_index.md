@@ -11,7 +11,3 @@ odd and their spouse have been fostering kittens for nonprofit animal shelters f
 They specialize in "bottle babies" and other high-need foster kittens. They are typically very young, often newborns, and require around-the-clock care until they are old enough for adoption. It is exhausting, occasionally heartbreaking, and completely worth it.
 
 This page is where we document the current residents. Kitten pictures are also a regular feature over on [Bluesky](https://bsky.app/profile/oddconley.bsky.social).
-
----
-
-> No kittens currently on record. Check back soon, there are always more kittens.
